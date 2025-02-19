@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Department of Home Affairs",
+    "description": "Official website for visa and immigration information.",
+    "url": "https://www.homeaffairs.gov.au",
+    "category": "Government"
+  },
+  {
+    "id": 2,
+    "title": "Skills Assessment - VETASSESS",
+    "description": "Get your skills assessed for migration purposes.",
+    "url": "https://www.vetassess.com.au",
+    "category": "Skills Assessment"
+  },
+  {
+    "id": 3,
+    "title": "Student Visa (Subclass 500)",
+    "description": "Information about the Student Visa (Subclass 500).",
+    "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+    "category": "Visa Information"
+  }
+]
