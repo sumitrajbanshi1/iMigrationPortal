@@ -1,90 +1,82 @@
+/* Basic styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
-header {
-    background-color: #2b3a42;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
+/* Container for search and results */
+.container {
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Search bar styles */
+.search-container {
+  margin-bottom: 20px;
 }
 
-header nav .logo img {
-    height: 40px;
+#searchInput {
+  width: 70%;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  outline: none;
 }
 
-header nav .nav-links ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+#searchInput:focus {
+  border-color: #0056b3;
 }
 
-header nav .nav-links ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-main {
-    padding: 20px;
-}
-
-h1 {
-    font-size: 2em;
-    color: #333;
-    text-align: center;
-}
-
+/* Category filter styles */
 .category-filter {
-    text-align: center;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-#category-filter {
-    padding: 8px;
-    font-size: 1em;
+.category-filter select {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  outline: none;
 }
 
-#resources-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
+/* Result items styling */
+.resource-card, .result-item {
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
-.resource-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.resource-card h2, .result-item h3 {
+  margin: 0;
 }
 
-.resource-card h2 a {
-    text-decoration: none;
-    color: #2b3a42;
+.resource-card p, .result-item p {
+  margin: 5px 0;
+  color: #555;
 }
 
-.resource-card p {
-    font-size: 1em;
-    color: #555;
+.resource-card a, .result-item a {
+  color: #007bff;
+  text-decoration: none;
 }
 
-.resource-card .category {
-    font-size: 0.9em;
-    color: #DF2771;
-    margin-top: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #2b3a42;
-    color: #fff;
+.resource-card a:hover, .result-item a:hover {
+  text-decoration: underline;
 }
