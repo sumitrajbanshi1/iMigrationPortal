@@ -3,161 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iMigrationPortal - Australian Immigration Resources</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/png" href="images/logo.png">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>iMigration Portal | Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header id="header">
+
+    <header>
         <nav>
-            <div class="logo"><img src="images/logo.png" alt="iMigrationPortal"></div>
-            <ul>
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#visa-info">Visa Info</a></li>
-                <li><a href="#pr-pathways">PR Pathways</a></li>
-                <li><a href="#skills-assessment">Skills Assessment</a></li>
-                <li><a href="#news-updates">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="srch">
-                <input type="text" class="search" placeholder="Search resources...">
+            <div class="logo">
+                <img src="images/logo.png" alt="iMigration Portal Logo">
             </div>
-            <img src="images/menu.png" class="menu" onclick="toggleMenu()" alt="menu">
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Your Complete Guide to Australian Immigration</h1>
-            <p>Official resources, updated guidelines, and expert-curated information for students</p>
-            <div class="cta-buttons">
-                <a href="#visa-info" class="cta">Visa Assistance</a>
-                <a href="#pr-pathways" class="cta">PR Calculator</a>
-            </div>
+    <!-- Resources Section -->
+    <main id="resources-section">
+        <h1>Immigration Resources</h1>
+        
+        <!-- Category Filter -->
+        <div class="category-filter">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="Government">Government & Official Resources</option>
+                <option value="Skills Assessment">Skills Assessment</option>
+                <option value="Visa Information">Visa Information</option>
+                <option value="PR Pathways">PR Pathways</option>
+                <option value="Health & Support">Health & Support</option>
+                <option value="Legal Resources">Legal Resources</option>
+                <option value="Community Support">Community Support</option>
+                <option value="News & Updates">News & Updates</option>
+                <option value="State Nomination">State-Specific Nomination</option>
+                <option value="Education">Education & Institutions</option>
+            </select>
         </div>
-    </div>
 
-    <!-- Main Content Sections -->
-    <section id="essential-links">
-        <h2>Essential Government Links</h2>
-        <div class="link-grid">
-            <a href="https://immi.homeaffairs.gov.au" class="link-card" target="_blank">
-                <img src="images/home-affairs.png" alt="Home Affairs">
-                <h3>Department of Home Affairs</h3>
-                <p>Official visa applications and information</p>
-            </a>
-            <!-- Add more government links here -->
-        </div>
-    </section>
-
-    <section id="visa-info" class="info-section">
-        <h2>Student Visa Information</h2>
-        <div class="content-box">
-            <div class="visa-type">
-                <h3>Subclass 500 (Student Visa)</h3>
-                <ul>
-                    <li>Eligibility Requirements</li>
-                    <li>Application Process</li>
-                    <li>Work Rights & Conditions</li>
-                </ul>
-                <a href="#" class="guide-btn">Download Complete Guide</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- PR Pathways Section -->
-    <section id="pr-pathways" class="info-section">
-        <h2>Permanent Residency Pathways</h2>
-        <div class="pathway-cards">
-            <div class="pathway">
-                <h3>Skilled Independent Visa (189)</h3>
-                <p>Points-based system requirements</p>
-                <div class="points-calculator">
-                    <input type="number" placeholder="Age">
-                    <!-- Add more calculator fields -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Assessment Section -->
-    <section id="skills-assessment" class="info-section">
-        <h2>Skills Assessment Bodies</h2>
-        <div class="assessment-grid">
-            <div class="assessment-card">
-                <img src="images/vetassess.png" alt="VETASSESS">
-                <h3>VETASSESS</h3>
-                <p>General professional occupations</p>
-                <a href="#" class="assessment-link">Start Assessment</a>
-            </div>
-            <!-- Add more assessment bodies -->
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Get Personalized Assistance</h2>
-        <div class="contact-form">
-            <form>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <select>
-                    <option>Visa Inquiry</option>
-                    <option>PR Consultation</option>
-                    <option>Skills Assessment</option>
-                </select>
-                <textarea placeholder="Your message..."></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Official Partners</h4>
-                <img src="images/government-logo.png" alt="Australian Government">
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Authorities</h4>
-                <p>Department of Home Affairs<br>
-                131 881 (in Australia)<br>
-                <a href="mailto:immigration.support@homeaffairs.gov.au">immigration.support@homeaffairs.gov.au</a></p>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>© 2023 iMigrationPortal. All rights reserved. Information verified with official sources.</p>
-        </div>
-    </footer>
+        <!-- Resources List -->
+        <div id="resources-list"></div>
+    </main>
 
     <script>
-        // Simplified JavaScript for mobile menu
-        function toggleMenu() {
-            const nav = document.querySelector('nav ul');
-            nav.classList.toggle('active');
-        }
+        // Function to load the data from data.json dynamically
+        $(document).ready(function() {
+            $.getJSON("data.json", function(data) {
+                function renderResources(filterCategory = "all") {
+                    let resourcesHTML = '';
+                    data.forEach(function(resource) {
+                        if (filterCategory === "all" || resource.category === filterCategory) {
+                            resourcesHTML += `
+                                <div class="resource-card">
+                                    <h2><a href="${resource.url}" target="_blank">${resource.title}</a></h2>
+                                    <p>${resource.description}</p>
+                                    <span class="category">${resource.category}</span>
+                                </div>
+                            `;
+                        }
+                    });
 
-        // Smooth scroll functionality
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                    $('#resources-list').html(resourcesHTML);
+                }
+
+                // Initial render with all resources
+                renderResources();
+
+                // Category filter functionality
+                $('#category-filter').change(function() {
+                    const selectedCategory = $(this).val();
+                    renderResources(selectedCategory);
                 });
             });
         });
     </script>
+
+    <footer>
+        <p>&copy; 2025 iMigration Portal</p>
+    </footer>
+
 </body>
 </html>
