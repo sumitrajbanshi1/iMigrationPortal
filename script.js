@@ -1,58 +1,36 @@
-// Load data from data.json and handle search functionality
-document.addEventListener('DOMContentLoaded', function() {
-  // Fetch data from data.json
-  fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-      const searchButton = document.getElementById('searchButton');
-      const searchInput = document.getElementById('searchInput');
-      const resultsDiv = document.getElementById('results');
+// Wait for the document to be ready
+$(document).ready(function() {
+    // Fetch the data from the data.json file
+    $.getJSON("data.json", function(data) {
+        // Function to render resources based on selected category
+        function renderResources(filterCategory = "all") {
+            let resourcesHTML = ''; // Initialize an empty string to hold HTML content
+            
+            // Iterate over all data to generate HTML for each resource
+            data.forEach(function(resource) {
+                // Check if the resource matches the selected category or "all"
+                if (filterCategory === "all" || resource.category === filterCategory) {
+                    resourcesHTML += `
+                        <div class="resource-card">
+                            <h2><a href="${resource.url}" target="_blank">${resource.title}</a></h2>
+                            <p>${resource.description}</p>
+                            <span class="category">${resource.category}</span>
+                        </div>
+                    `;
+                }
+            });
 
-      // Search button click handler
-      searchButton.addEventListener('click', () => {
-        const query = searchInput.value.toLowerCase();
-        resultsDiv.innerHTML = ''; // Clear previous results
-
-        if (query.trim() === '') {
-          resultsDiv.innerHTML = '<p>Please enter a search term.</p>';
-          return;
+            // Insert the generated HTML into the resources list section
+            $('#resources-list').html(resourcesHTML);
         }
 
-        // Filter data based on query
-        const filteredData = data.filter(item => {
-          return (
-            item.title.toLowerCase().includes(query) ||
-            item.description.toLowerCase().includes(query) ||
-            item.category.toLowerCase().includes(query)
-          );
+        // Initial render with all resources
+        renderResources();
+
+        // Event listener for category filter change
+        $('#category-filter').change(function() {
+            const selectedCategory = $(this).val(); // Get the selected category
+            renderResources(selectedCategory); // Render resources based on the selected category
         });
-
-        // Display results
-        if (filteredData.length > 0) {
-          filteredData.forEach(item => {
-            const resultItem = document.createElement('div');
-            resultItem.className = 'result-item';
-            resultItem.innerHTML = `
-              <h3><a href="${item.url}" target="_blank">${item.title}</a></h3>
-              <p>${item.description}</p>
-              <p><strong>Category:</strong> ${item.category}</p>
-            `;
-            resultsDiv.appendChild(resultItem);
-          });
-        } else {
-          resultsDiv.innerHTML = '<p>No results found.</p>';
-        }
-      });
-
-      // Optional: Enable search on pressing "Enter" key
-      searchInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-          searchButton.click();
-        }
-      });
-    })
-    .catch(error => {
-      console.error('Error loading data:', error);
-      resultsDiv.innerHTML = '<p>Failed to load resources. Please try again later.</p>';
     });
 });
