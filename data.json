@@ -24,15 +24,127 @@
     "category": "Skills Assessment"
   },
   {
+    "title": "TRA (Trades Recognition Australia)",
+    "description": "Assessment for trade occupations (e.g., electricians, chefs).",
+    "url": "https://www.tradesrecognitionaustralia.gov.au",
+    "category": "Skills Assessment"
+  },
+  {
+    "title": "ACS (IT Professionals)",
+    "description": "Skills assessment for IT and computer science professionals.",
+    "url": "https://www.acs.org.au",
+    "category": "Skills Assessment"
+  },
+  {
+    "title": "AITSL (Teachers)",
+    "description": "Assessment for teachers and educators.",
+    "url": "https://www.aitsl.edu.au",
+    "category": "Skills Assessment"
+  },
+  {
     "title": "Student Visa (Subclass 500)",
     "description": "Apply for or extend your student visa.",
     "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
     "category": "Visa Information"
   },
   {
+    "title": "Temporary Graduate Visa (Subclass 485)",
+    "description": "Post-study work visa for international students.",
+    "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485",
+    "category": "Visa Information"
+  },
+  {
+    "title": "Work Restrictions on Student Visas",
+    "description": "Understand your work rights and limits.",
+    "url": "https://immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/see-your-visa-conditions",
+    "category": "Work Rights"
+  },
+  {
+    "title": "Fair Work Ombudsman",
+    "description": "Know your workplace rights in Australia.",
+    "url": "https://www.fairwork.gov.au",
+    "category": "Work Rights"
+  },
+  {
     "title": "Skilled Independent Visa (Subclass 189)",
     "description": "Points-tested PR visa (no sponsor required).",
     "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189",
     "category": "PR Pathways"
-  }
-]
+  },
+  {
+    "title": "State-Nominated Visas (Subclass 190/491)",
+    "description": "Apply for PR through state sponsorship.",
+    "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190",
+    "category": "PR Pathways"
+  },
+  {
+    "title": "Employer-Sponsored Visas (Subclass 482/186)",
+    "description": "PR pathways through employer sponsorship.",
+    "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482",
+    "category": "PR Pathways"
+  },
+  {
+    "title": "OSHC (Overseas Student Health Cover)",
+    "description": "Mandatory health insurance for international students.",
+    "url": "https://www.privatehealth.gov.au/health_insurance/overseas/overseas_student_health_cover.htm",
+    "category": "Health & Support"
+  },
+  {
+    "title": "Medicare Eligibility Checker",
+    "description": "Check if you’re eligible for Medicare.",
+    "url": "https://www.servicesaustralia.gov.au/individuals/medicare",
+    "category": "Health & Support"
+  },
+  {
+    "title": "MARA (Migration Agents)",
+    "description": "Find registered migration agents for legal advice.",
+    "url": "https://www.mara.gov.au",
+    "category": "Legal Resources"
+  },
+  {
+    "title": "Study in Australia (Official Guide)",
+    "description": "Government portal for international students.",
+    "url": "https://www.studyinaustralia.gov.au",
+    "category": "Education"
+  },
+  {
+    "title": "Reddit r/AusVisa",
+    "description": "Community forum for visa advice and discussions.",
+    "url": "https://www.reddit.com/r/AusVisa",
+    "category": "Community Support"
+  },
+  {
+    "title": "SBS Immigration News",
+    "description": "Latest updates on Australian immigration policies.",
+    "url": "https://www.sbs.com.au/language/english/australian-government-announces-changes-to-migration-system",
+    "category": "News & Updates"
+  },
+  {
+    "title": "Australian Immigration Podcast",
+    "description": "Podcast explaining visa rules and updates.",
+    "url": "https://www.immigrationpodcast.com.au",
+    "category": "News & Updates"
+  },
+  {
+    "title": "NSW Skilled Migration",
+    "description": "State nomination for New South Wales.",
+    "url": "https://www.nsw.gov.au/visas-and-migration/skilled-migration",
+    "category": "State Nomination"
+  },
+  {
+    "title": "Victoria Skilled Migration",
+    "description": "State nomination for Victoria.",
+    "url": "https://liveinmelbourne.vic.gov.au/migrate/skilled-migration-visas",
+    "category": "State Nomination"
+  },
+  {
+    "title": "Queensland Skilled Migration",
+    "description": "State nomination for Queensland.",
+    "url": "https://migration.qld.gov.au",
+    "category": "State Nomination"
+  },
+  {
+    "title": "CRICOS (Registered Institutions)",
+    "
+::contentReference[oaicite:0]{index=0}
+ 
