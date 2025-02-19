@@ -1,23 +1,68 @@
 [
   {
-    "id": 1,
-    "title": "Department of Home Affairs",
-    "description": "Official website for visa and immigration information.",
+    "title": "Department of Home Affairs (Australia)",
+    "description": "Official government site for visas, citizenship, and immigration policies.",
     "url": "https://www.homeaffairs.gov.au",
     "category": "Government"
   },
   {
-    "id": 2,
-    "title": "Skills Assessment - VETASSESS",
-    "description": "Get your skills assessed for migration purposes.",
+    "title": "SkillSelect (Expression of Interest)",
+    "description": "Apply for skilled visas like Subclass 189, 190, and 491.",
+    "url": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect",
+    "category": "PR Pathways"
+  },
+  {
+    "title": "VETASSESS (Skills Assessment)",
+    "description": "Skills assessment for trades and professions (e.g., engineers, nurses).",
     "url": "https://www.vetassess.com.au",
     "category": "Skills Assessment"
   },
   {
-    "id": 3,
-    "title": "Student Visa (Subclass 500)",
-    "description": "Information about the Student Visa (Subclass 500).",
-    "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+    "title": "TRA (Trades Recognition Australia)",
+    "description": "Skills assessment for trade occupations (e.g., electricians, carpenters).",
+    "url": "https://www.tradesrecognitionaustralia.gov.au",
+    "category": "Skills Assessment"
+  },
+  {
+    "title": "ACS (IT Professionals Assessment)",
+    "description": "Skills assessment for IT and computer science professionals.",
+    "url": "https://www.acs.org.au",
+    "category": "Skills Assessment"
+  },
+  {
+    "title": "Temporary Graduate Visa (Subclass 485)",
+    "description": "Post-study work visa for international students.",
+    "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485",
     "category": "Visa Information"
+  },
+  {
+    "title": "Skilled Independent Visa (Subclass 189)",
+    "description": "Points-tested visa for permanent residency (no sponsor required).",
+    "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189",
+    "category": "PR Pathways"
+  },
+  {
+    "title": "State Nomination Visas (Subclass 190/491)",
+    "description": "State-sponsored PR pathways for skilled workers.",
+    "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190",
+    "category": "PR Pathways"
+  },
+  {
+    "title": "Australian Immigration News Updates",
+    "description": "Latest changes to immigration rules and policies.",
+    "url": "https://www.sbs.com.au/language/english/australian-government-announces-changes-to-migration-system",
+    "category": "News & Updates"
+  },
+  {
+    "title": "Points Calculator for PR",
+    "description": "Check eligibility for skilled visas based on points.",
+    "url": "https://immi.homeaffairs.gov.au/help-support/tools/points-calculator",
+    "category": "PR Pathways"
+  },
+  {
+    "title": "Migration Agents Registration Authority",
+    "description": "Find registered migration agents for legal advice.",
+    "url": "https://www.mara.gov.au",
+    "category": "Legal Resources"
   }
 ]
