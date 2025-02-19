@@ -1,112 +1,94 @@
-/* General Styles */
+/* Base Styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
 }
 
-/* Navigation Menu */
-nav {
-  background-color: #007BFF;
-  padding: 10px 0;
+/* Header & Navigation */
+header {
+    background: #002664; /* Australian blue */
+    padding: 1rem 5%;
+}
+
+.logo img {
+    height: 50px;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+    display: flex;
+    gap: 2rem;
 }
 
-nav ul li {
-  margin: 0 15px;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,38,100,0.8), rgba(0,38,100,0.8)),
+                url('images/aus-bg.jpg');
+    background-size: cover;
+    color: white;
+    padding: 4rem 5%;
+    text-align: center;
 }
 
-nav ul li a:hover {
-  background-color: #0056b3;
+.cta-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
 }
 
-/* Container */
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  flex: 1;
+.cta {
+    background: #E4002B; /* Australian red */
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
 }
 
-h1 {
-  text-align: center;
-  color: #333;
+/* Information Sections */
+.info-section {
+    padding: 3rem 5%;
+    background: white;
+    margin: 2rem 0;
 }
 
-#searchInput {
-  width: 70%;
-  padding: 10px;
-  font-size: 16px;
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
 }
 
-#searchButton {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+.link-card {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-#results {
-  margin-top: 20px;
+.link-card:hover {
+    transform: translateY(-5px);
 }
 
-.result-item {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #002664;
+        flex-direction: column;
+        padding: 1rem;
+    }
 
-.result-item h3 {
-  margin: 0;
-  color: #007BFF;
-}
-
-.result-item p {
-  margin: 5px 0;
-}
-
-.result-item a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-.result-item a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  background-color: #007BFF;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: auto;
-}
-
-footer p {
-  margin: 5px 0;
-}
-
-footer strong {
-  color: #ffdd57; /* Highlight your name */
+    .menu {
+        display: block;
+    }
 }
