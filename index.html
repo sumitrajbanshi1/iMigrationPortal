@@ -29,6 +29,11 @@
     <main id="resources-section">
         <h1>Immigration Resources</h1>
         
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search Australian Immigration Resources..." onkeyup="searchResources()">
+        </div>
+
         <!-- Category Filter -->
         <div class="category-filter">
             <select id="category-filter">
@@ -48,6 +53,7 @@
 
         <!-- Resources List -->
         <div id="resources-list"></div>
+        <div id="searchResults"></div>
     </main>
 
     <script>
@@ -67,7 +73,6 @@
                             `;
                         }
                     });
-
                     $('#resources-list').html(resourcesHTML);
                 }
 
@@ -79,6 +84,39 @@
                     const selectedCategory = $(this).val();
                     renderResources(selectedCategory);
                 });
+
+                // Search functionality
+                function searchResources() {
+                    const query = document.getElementById('searchInput').value.toLowerCase();
+                    const filteredResults = data.filter(item => 
+                        item.title.toLowerCase().includes(query) || 
+                        item.description.toLowerCase().includes(query) || 
+                        item.category.toLowerCase().includes(query)
+                    );
+
+                    displayResults(filteredResults);
+                }
+
+                // Display search results
+                function displayResults(results) {
+                    const resultsContainer = document.getElementById('searchResults');
+                    resultsContainer.innerHTML = ''; // Clear previous results
+
+                    if (results.length === 0) {
+                        resultsContainer.innerHTML = '<p>No results found.</p>';
+                    } else {
+                        results.forEach(result => {
+                            const resultItem = document.createElement('div');
+                            resultItem.classList.add('result-item');
+                            resultItem.innerHTML = `
+                                <h3><a href="${result.url}" target="_blank">${result.title}</a></h3>
+                                <p>${result.description}</p>
+                                <p><strong>Category:</strong> ${result.category}</p>
+                            `;
+                            resultsContainer.appendChild(resultItem);
+                        });
+                    }
+                }
             });
         });
     </script>
