@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PR Pathways - Immigration Resources</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="news-updates.html">News & Updates</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>PR Pathways</h1>
+    <div id="results"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ by <strong>Your Name</strong></p>
+    <p>&copy; 2023 All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Load data from data.json and display PR Pathways resources
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        const resultsDiv = document.getElementById('results');
+        const filteredData = data.filter(item => item.category === 'PR Pathways');
+
+        if (filteredData.length > 0) {
+          filteredData.forEach(item => {
+            const resultItem = document.createElement('div');
+            resultItem.className = 'result-item';
+            resultItem.innerHTML = `
+              <h3><a href="${item.url}" target="_blank">${item.title}</a></h3>
+              <p>${item.description}</p>
+              <p><strong>Category:</strong> ${item.category}</p>
+            `;
+            resultsDiv.appendChild(resultItem);
+          });
+        } else {
+          resultsDiv.innerHTML = '<p>No results found.</p>';
+        }
+      })
+      .catch(error => {
+        console.error('Error loading data:', error);
+        resultsDiv.innerHTML = '<p>Failed to load resources. Please try again later.</p>';
+      });
+  </script>
+</body>
+</html>
