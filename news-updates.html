@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PR Pathways - Immigration Resources</title>
+  <title>News & Updates</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,23 +17,23 @@
 
   <!-- Main Content -->
   <div class="container">
-    <h1>PR Pathways</h1>
+    <h1>News & Updates</h1>
     <div id="results"></div>
   </div>
 
   <!-- Footer -->
   <footer>
-    <p>Made with ❤️ by <strong>Your Name</strong></p>
+    <p>Made with ❤️ by <strong>Sumit Rajbanshi</strong></p>
     <p>&copy; 2023 All rights reserved.</p>
   </footer>
 
   <script>
-    // Load data from data.json and display PR Pathways resources
+    // Load data from data.json and display News & Updates resources
     fetch('data.json')
       .then(response => response.json())
       .then(data => {
         const resultsDiv = document.getElementById('results');
-        const filteredData = data.filter(item => item.category === 'PR Pathways');
+        const filteredData = data.filter(item => item.category === 'News & Updates');
 
         if (filteredData.length > 0) {
           filteredData.forEach(item => {
